@@ -5,6 +5,7 @@
   --accent-color: #212121;
   --background-secondary: #f5f4fa;
   --icon-color: #afb1b8;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list {
@@ -110,7 +111,7 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--timing-function);
 }
 
 .site-nav .link:hover,
@@ -127,13 +128,13 @@ img {
   text-decoration: none;
   align-items: center;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--timing-function);
 }
 
 .nav-icon {
   margin-right: 10px;
   fill: #757575;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms var(--timing-function);
 }
 .auth-nav .contact:hover,
 .auth-nav .contact:focus {
@@ -203,7 +204,7 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-function);
 }
 .button:hover {
   background-color: #188ce8;
@@ -218,7 +219,7 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   scale: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms var(--timing-function), scale 250ms var(--timing-function);
 }
 
 .backdrop.is-hidden {
@@ -249,8 +250,9 @@ img {
   top: 8px;
   right: 8px;
   border-radius: 50%;
-  border: 1px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   color: #000000;
+  background-color: var(--primary-white-color);
 }
 
 .hero-icon {
@@ -384,7 +386,7 @@ img {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-function);
 }
 
 .team-icons:not(last-child) {
@@ -393,7 +395,7 @@ img {
 
 .team-icon {
   fill: var(--icon-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms var(--timing-function);
 }
 
 .team-icons:hover,
@@ -426,12 +428,12 @@ img {
   border-radius: 4px;
   width: 170px;
   height: 92px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms var(--timing-function);
 }
 
 .link-icon {
   fill: var(--icon-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms var(--timing-function);
 }
 
 .link-icons:hover,
@@ -466,7 +468,7 @@ img {
 .footer-nav {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--timing-function);
 }
 
 .footer-nav:hover,
@@ -519,7 +521,7 @@ img {
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-function);
 }
 
 .footer-link:hover,
@@ -559,8 +561,7 @@ img {
   line-height: 1.6;
   text-align: center;
   cursor: pointer;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 
 .button-offer:focus,
@@ -628,8 +629,7 @@ img {
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function);
 }
 
 .portfolio-item:hover .overlay {
